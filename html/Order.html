@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Your Order | VELORA</title>
+    <link rel="stylesheet" href="../css/Order.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header-container">
+      <a href="Home.html" class="left">VELORA</a>
+      <div class="head" id="navMenu">
+        <ul class="list">
+          <li><a href="Home.html">HOME</a></li>
+          <li><a href="Menu.html">MENU</a></li>
+          <li><a href="Home.html#about">ABOUT</a></li>
+          <li><a href="Order.html">ORDER</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <a href="#" class="cart-icon-btn">
+          🛒 <span id="cart-badge-nav" class="cart-badge">0</span>
+        </a>
+        <div class="menu-icon" id="menuBtn">&#9776;</div>
+      </div>
+    </header>
+    <section class="summary-section">
+      <div class="summary-box">
+        <div class="summary-item">
+          <span class="summary-label">Total Items</span>
+          <span class="summary-value" id="totalItems">0</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Total Amount</span>
+          <span class="summary-value" id="totalPrice">Rs. 0</span>
+        </div>
+        <div
+          class="summary-item"
+          style="justify-content: center; padding-top: 10px"
+        >
+          <button
+            class="add-btn"
+            style="
+              width: auto;
+              padding: 10px 30px;
+              border-radius: 30px;
+              font-size: 14px;
+            "
+            onclick="placeOrder()"
+          >
+            Place Order Now
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="order-container">
+      <div class="order-grid" id="orderGrid">
+        <div id="empty-cart-msg" class="empty-cart-state">
+          <i class="fas fa-shopping-basket"></i>
+          <p>Your premium coffee selection is currently empty.</p>
+          <a href="Menu.html" class="discover-btn">
+            <span>Discover Our Menu</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="suggestions-section">
+      <h2>Recommended For You</h2>
+      <div class="suggestions-wrapper">
+        <div class="suggestions-grid" id="suggestionsGrid">
+          <div class="suggestion-card">
+            <div class="suggestion-img">
+              <img
+                src="https://images.unsplash.com/photo-1561047029-3000c68339ca?auto=format&fit=crop&w=500&h=380&q=80"
+                alt="Cappuccino"
+              />
+              <span class="suggestion-badge">POPULAR</span>
+            </div>
+            <h3>Cappuccino</h3>
+            <p class="suggestion-desc">Bold espresso with velvety foam</p>
+            <div class="suggestion-footer">
+              <span class="suggestion-price">Rs. 220</span>
+              <button
+                class="add-btn"
+                onclick="
+                  quickAdd(
+                    'Cappuccino',
+                    220,
+                    'https://images.unsplash.com/photo-1561047029-3000c68339ca?auto=format&fit=crop&w=500&h=380&q=80',
+                  )
+                "
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="suggestion-card">
+            <div class="suggestion-img">
+              <img
+                src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&h=380&q=80"
+                alt="Danish Pastry"
+              />
+              <span class="suggestion-badge">FRESH</span>
+            </div>
+            <h3>Danish Pastry</h3>
+            <p class="suggestion-desc">Flaky pastry with sweet glaze</p>
+            <div class="suggestion-footer">
+              <span class="suggestion-price">Rs. 180</span>
+              <button
+                class="add-btn"
+                onclick="
+                  quickAdd(
+                    'Danish Pastry',
+                    180,
+                    'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&h=380&q=80',
+                  )
+                "
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="suggestion-card">
+            <div class="suggestion-img">
+              <img
+                src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=500&h=380&q=80"
+                alt="Double Espresso"
+              />
+              <span class="suggestion-badge">STRONG</span>
+            </div>
+            <h3>Double Espresso</h3>
+            <p class="suggestion-desc">Pure concentrated coffee shot</p>
+            <div class="suggestion-footer">
+              <span class="suggestion-price">Rs. 240</span>
+              <button
+                class="add-btn"
+                onclick="
+                  quickAdd(
+                    'Double Espresso',
+                    240,
+                    'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=500&h=380&q=80',
+                  )
+                "
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="suggestion-card">
+            <div class="suggestion-img">
+              <img
+                src="https://images.unsplash.com/photo-1567327613485-fbc7bf196198?auto=format&fit=crop&w=500&h=380&q=80"
+                alt="Blueberry Muffin"
+              />
+              <span class="suggestion-badge">SWEET</span>
+            </div>
+            <h3>Blueberry Muffin</h3>
+            <p class="suggestion-desc">Baked fresh with real berries</p>
+            <div class="suggestion-footer">
+              <span class="suggestion-price">Rs. 150</span>
+              <button
+                class="add-btn"
+                onclick="
+                  quickAdd(
+                    'Blueberry Muffin',
+                    150,
+                    'https://images.unsplash.com/photo-1567327613485-fbc7bf196198?auto=format&fit=crop&w=500&h=380&q=80',
+                  )
+                "
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>☕ VELORA</h3>
+          <p>
+            Your favorite coffee destination, handcrafted with passion since
+            2010.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <p>Plans & pricing</p>
+          <p>Work with us</p>
+          <p>Privacy policy</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const getCart = () => {
+        try {
+          return JSON.parse(localStorage.getItem("cart")) || [];
+        } catch (e) {
+          console.error("Cart parse error", e);
+          return [];
+        }
+      };
+      let cart = getCart();
+      const saveCart = () => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+        window.dispatchEvent(new Event("storage"));
+      };
+      const showNotification = (message) => {
+        console.log("Notification:", message);
+        const n = document.createElement("div");
+        n.className = "notification success-notification";
+        n.innerText = message;
+        n.style.position = "fixed";
+        n.style.top = "20px";
+        n.style.right = "20px";
+        n.style.zIndex = "10000";
+        document.body.appendChild(n);
+        setTimeout(() => n.remove(), 3000);
+      };
+      const renderOrderItems = () => {
+        const orderGrid = document.getElementById("orderGrid");
+        const totalItemsEl = document.getElementById("totalItems");
+        const totalPriceEl = document.getElementById("totalPrice");
+        const cartBadgeNav = document.getElementById("cart-badge-nav");
+        const emptyMsg = document.getElementById("empty-cart-msg");
+        if (!orderGrid || !totalItemsEl || !totalPriceEl) return;
+        if (cart.length === 0) {
+          orderGrid.innerHTML = "";
+          if (emptyMsg) {
+            orderGrid.appendChild(emptyMsg);
+            emptyMsg.style.display = "block";
+          }
+          totalItemsEl.innerText = "0";
+          totalPriceEl.innerText = "Rs. 0";
+          if (cartBadgeNav) cartBadgeNav.innerText = "0";
+          return;
+        }
+        if (emptyMsg) emptyMsg.style.display = "none";
+        orderGrid.innerHTML = "";
+        let total = 0;
+        let totalItems = 0;
+        cart.forEach((item, index) => {
+          total += item.price * item.quantity;
+          totalItems += item.quantity;
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+                    <div class="card-img-wrapper" style="position: relative;">
+                        <img src="${item.imageSrc}" alt="${item.title}">
+                        <button class="remove-card-btn" 
+                                style="position: absolute; top: 10px; left: 10px; z-index: 999; cursor: pointer;" 
+                                onclick="event.stopPropagation(); window.removeFromOrder(${index})">✕</button>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">${item.title}</h3>
+                        <p class="card-desc">Handcrafted fresh for you.</p>
+                        <div class="card-bottom">
+                            <span class="price">Rs. ${item.price}</span>
+                            <div class="qty">
+                                <button onclick="event.stopPropagation(); window.updateItemQty(${index}, -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="event.stopPropagation(); window.updateItemQty(${index}, 1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+          orderGrid.appendChild(card);
+        });
+        totalItemsEl.innerText = totalItems;
+        totalPriceEl.innerText = "Rs. " + total;
+        if (cartBadgeNav) cartBadgeNav.innerText = totalItems;
+      };
+      window.updateItemQty = (index, change) => {
+        if (cart[index].quantity + change > 0) {
+          cart[index].quantity += change;
+        } else {
+          cart.splice(index, 1);
+        }
+        saveCart();
+        renderOrderItems();
+      };
+      window.removeFromOrder = (index) => {
+        console.log("Removing item at index:", index);
+        cart.splice(index, 1);
+        saveCart();
+        renderOrderItems();
+        showNotification("Item removed from order");
+      };
+      window.quickAdd = (title, price, imageSrc) => {
+        console.log("Quick adding:", title);
+        const existingItem = cart.find((item) => item.title === title);
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({ title, price, quantity: 1, imageSrc });
+        }
+        saveCart();
+        renderOrderItems();
+        showNotification(`✓ Added ${title} to your order`);
+      };
+      window.placeOrder = async () => {
+        if (cart.length === 0) {
+          showNotification("Your cart is empty!");
+          return;
+        }
+        try {
+          const response = await fetch("../php/check_login.php");
+          const data = await response.json();
+          if (!data.logged_in) {
+            alert("يجب عليك تسجيل الدخول أولاً لتأكيد الطلب!");
+            window.location.href = "index-login.html";
+            return;
+          }
+        } catch (e) {
+          console.error("Login check failed", e);
+          alert("حدث خطأ أثناء التحقق من تسجيل الدخول.");
+          return;
+        }
+        showNotification("🎉 Order placed successfully! Thank you.");
+        cart = [];
+        saveCart();
+        renderOrderItems();
+      };
+      window.addEventListener("storage", () => {
+        cart = getCart();
+        renderOrderItems();
+      });
+      const setupNav = () => {
+        const menuBtn = document.getElementById("menuBtn");
+        const navMenu = document.getElementById("navMenu");
+        if (menuBtn && navMenu) {
+          menuBtn.addEventListener("click", () =>
+            navMenu.classList.toggle("active"),
+          );
+        }
+      };
+      document.addEventListener("DOMContentLoaded", () => {
+        setupNav();
+        renderOrderItems();
+      });
+    </script>
+  </body>
+</html>

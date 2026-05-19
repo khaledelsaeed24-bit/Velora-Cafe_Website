@@ -1,0 +1,4298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Menu | Premium Coffee &amp; Bakery</title>
+    <meta
+      name="description"
+      content="Explore our premium menu featuring handcrafted hot coffee, refreshing cold beverages, fresh bakery items, and irresistible desserts."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/Menu.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <a href="Home.html" class="left" style="text-decoration: none">VELORA</a>
+      <div class="head" id="navMenu">
+        <ul class="list">
+          <li><a href="#hot-coffee-section">HOT COFFEE</a></li>
+          <li><a href="#cold-coffee-section">COLD COFFEE</a></li>
+          <li><a href="#bakery-section">BAKERY</a></li>
+          <li><a href="#dessert-section">DESSERT</a></li>
+          <li><a href="Order.html">ORDER</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="dropdown mobile-dropdown">
+          <ul class="dropdown-menu">
+            <li><a href="#hot-coffee-section">Hot Coffee</a></li>
+            <li><a href="#cold-coffee-section">Cold Coffee</a></li>
+            <li><a href="#bakery-section">Bakery</a></li>
+            <li><a href="#dessert-section">Dessert</a></li>
+          </ul>
+        </div>
+        <a href="Cart.html" id="cart-icon-btn" class="cart-icon-btn">
+          🛒 <span id="cart-badge" class="cart-badge">0</span>
+        </a>
+        <div class="menu-icon" id="menuBtn">&#9776;</div>
+      </div>
+    </header>
+    <div
+      id="modal-hot"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Hot Coffee - All Items"
+    >
+      <div class="modal-box">
+        <div class="modal-header hot-modal-header">
+          <div class="modal-header-info">
+            <img src="../images/1.svg" class="modal-cat-icon" alt="" />
+            <div>
+              <h2>Hot Coffee</h2>
+              <p>All 10 handcrafted hot beverages</p>
+            </div>
+          </div>
+          <a href="#" class="modal-close" aria-label="Close">&times;</a>
+        </div>
+        <div class="modal-body">
+          <div class="modal-grid">
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Latte"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-1" class="heart-check" />
+                <label for="mheart-hot-1" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Latte</h3>
+                <p>Rich espresso with steamed milk and light foam</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 250</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1561047029-3000c68339ca?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Cappuccino"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-2" class="heart-check" />
+                <label for="mheart-hot-2" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Cappuccino</h3>
+                <p>Bold espresso topped with velvety milk foam</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 220</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Espresso"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-3" class="heart-check" />
+                <label for="mheart-hot-3" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Espresso</h3>
+                <p>Pure strong coffee shot with rich crema on top</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 180</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Turkish Coffee"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-4" class="heart-check" />
+                <label for="mheart-hot-4" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Turkish Coffee</h3>
+                <p>Traditional finely ground coffee with cardamom</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 200</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Mocha"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-5" class="heart-check" />
+                <label for="mheart-hot-5" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Mocha</h3>
+                <p>Espresso with chocolate, steamed milk &amp; whipped cream</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 280</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Americano"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-6" class="heart-check" />
+                <label for="mheart-hot-6" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Americano</h3>
+                <p>Double espresso diluted with hot water for smooth taste</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 190</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Macchiato"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-7" class="heart-check" />
+                <label for="mheart-hot-7" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Macchiato</h3>
+                <p>Espresso marked with a dash of foamed milk</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 230</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Flat White"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-8" class="heart-check" />
+                <label for="mheart-hot-8" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Flat White</h3>
+                <p>Smooth microfoam over a double ristretto shot</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 240</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Cortado"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-9" class="heart-check" />
+                <label for="mheart-hot-9" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Cortado</h3>
+                <p>Equal parts espresso and warm milk, perfectly balanced</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 210</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Pour Over"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-hot-10" class="heart-check" />
+                <label for="mheart-hot-10" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Pour Over</h3>
+                <p>Hand-poured specialty filter coffee, clean and aromatic</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 260</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="modal-cold"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Cold Coffee - All Items"
+    >
+      <div class="modal-box">
+        <div class="modal-header cold-modal-header">
+          <div class="modal-header-info">
+            <img src="../images/2.svg" class="modal-cat-icon" alt="" />
+            <div>
+              <h2>Cold Coffee</h2>
+              <p>All 10 refreshing iced creations</p>
+            </div>
+          </div>
+          <a href="#" class="modal-close" aria-label="Close">&times;</a>
+        </div>
+        <div class="modal-body">
+          <div class="modal-grid">
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Iced Latte"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-cold-1" class="heart-check" />
+                <label for="mheart-cold-1" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Iced Latte</h3>
+                <p>Chilled espresso with cold milk over ice cubes</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 280</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Cold Brew"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-cold-2" class="heart-check" />
+                <label for="mheart-cold-2" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Cold Brew</h3>
+                <p>Slow-steeped for 24 hours, smooth and bold</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 260</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Frappuccino"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-cold-3" class="heart-check" />
+                <label for="mheart-cold-3" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Frappuccino</h3>
+                <p>Blended iced coffee with cream and caramel drizzle</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 320</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Iced Mocha"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-cold-4" class="heart-check" />
+                <label for="mheart-cold-4" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Iced Mocha</h3>
+                <p>Chocolate espresso blend with ice and whipped cream</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 300</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1621944190310-e3cca1564bd7?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Iced Macchiato"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-cold-5" class="heart-check" />
+                <label for="mheart-cold-5" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Iced Macchiato</h3>
+                <p>Layered caramel, milk, and espresso over ice</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 290</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1623869675781-80aa31012a5a?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Vietnamese Coffee"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-cold-6" class="heart-check" />
+                <label for="mheart-cold-6" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Vietnamese Coffee</h3>
+                <p>Strong coffee with sweet condensed milk on ice</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 270</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1517959105821-eaf2591984ca?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Iced Americano"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-cold-7" class="heart-check" />
+                <label for="mheart-cold-7" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Iced Americano</h3>
+                <p>Double shot espresso with cold water and ice</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 220</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Coffee Smoothie"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-cold-8" class="heart-check" />
+                <label for="mheart-cold-8" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Coffee Smoothie</h3>
+                <p>Blended coffee with banana, chocolate &amp; cocoa</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 340</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Iced Cappuccino"
+                  loading="lazy"
+                />
+                <input type="checkbox" id="mheart-cold-9" class="heart-check" />
+                <label for="mheart-cold-9" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Iced Cappuccino</h3>
+                <p>Chilled espresso with frothed milk foam over ice</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 250</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Nitro Cold Brew"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-cold-10"
+                  class="heart-check"
+                />
+                <label for="mheart-cold-10" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Nitro Cold Brew</h3>
+                <p>Nitrogen-infused cold brew with a silky, creamy texture</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 310</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="modal-bakery"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Bakery - All Items"
+    >
+      <div class="modal-box">
+        <div class="modal-header bakery-modal-header">
+          <div class="modal-header-info">
+            <img src="../images/3.svg" class="modal-cat-icon" alt="" />
+            <div>
+              <h2>Bakery</h2>
+              <p>All 10 freshly baked goods</p>
+            </div>
+          </div>
+          <a href="#" class="modal-close" aria-label="Close">&times;</a>
+        </div>
+        <div class="modal-body">
+          <div class="modal-grid">
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Croissant"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-1"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-1" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Croissant</h3>
+                <p>Golden flaky butter croissant, freshly baked</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 150</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Chocolate Muffin"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-2"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-2" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Chocolate Muffin</h3>
+                <p>Rich moist muffin loaded with chocolate chips</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 180</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Cinnamon Roll"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-3"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-3" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Cinnamon Roll</h3>
+                <p>Soft swirl pastry with cream cheese frosting</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 200</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Danish Pastry"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-4"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-4" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Danish Pastry</h3>
+                <p>Flaky pastry filled with fruit and custard</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 170</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1509365390695-33aee754301f?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Blueberry Scone"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-5"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-5" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Blueberry Scone</h3>
+                <p>Buttery scone bursting with fresh blueberries</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 160</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Pain au Chocolat"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-6"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-6" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Pain au Chocolat</h3>
+                <p>Flaky layers wrapped around dark chocolate bars</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 190</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Cookies"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-7"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-7" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Cookies</h3>
+                <p>Warm chewy cookies with chocolate chip chunks</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 120</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Banana Bread"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-8"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-8" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Banana Bread</h3>
+                <p>Moist banana loaf topped with crunchy walnuts</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 140</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Sourdough Bread"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-9"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-9" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Sourdough Bread</h3>
+                <p>Artisan slow-fermented sourdough with a crispy crust</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 130</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1548369937-47519962c11a?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Everything Bagel"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-bakery-10"
+                  class="heart-check"
+                />
+                <label for="mheart-bakery-10" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Everything Bagel</h3>
+                <p>Toasted bagel with cream cheese and spice blend</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 175</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="modal-dessert"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Dessert - All Items"
+    >
+      <div class="modal-box">
+        <div class="modal-header dessert-modal-header">
+          <div class="modal-header-info">
+            <img src="../images/4.svg" class="modal-cat-icon" alt="" />
+            <div>
+              <h2>Dessert</h2>
+              <p>All 10 heavenly sweet creations</p>
+            </div>
+          </div>
+          <a href="#" class="modal-close" aria-label="Close">&times;</a>
+        </div>
+        <div class="modal-body">
+          <div class="modal-grid">
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Tiramisu"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-1"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-1" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Tiramisu</h3>
+                <p>Classic Italian layers of coffee-soaked ladyfingers</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 350</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Cheesecake"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-2"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-2" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Cheesecake</h3>
+                <p>Creamy New York style with buttery graham crust</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 320</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Brownie"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-3"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-3" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Brownie</h3>
+                <p>Fudgy dark chocolate brownie with walnut pieces</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 250</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Crème Brûlée"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-4"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-4" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Crème Brûlée</h3>
+                <p>Rich vanilla custard with caramelized sugar top</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 380</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Panna Cotta"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-5"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-5" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Panna Cotta</h3>
+                <p>Silky Italian cream dessert with berry compote</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 300</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Éclair"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-6"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-6" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Éclair</h3>
+                <p>Choux pastry filled with cream, topped with glaze</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 220</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Chocolate Cake"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-7"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-7" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Chocolate Cake</h3>
+                <p>Three-layer chocolate cake with ganache frosting</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 280</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1562007908-17c67e878c88?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Apple Pie"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-8"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-8" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Apple Pie</h3>
+                <p>Warm spiced apple filling in a buttery crust</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 260</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="French Macarons"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-9"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-9" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>French Macarons</h3>
+                <p>Delicate almond shells with rich ganache filling</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 180</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="modal-card">
+              <div class="modal-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1541599468348-e96984315921?auto=format&fit=crop&w=500&h=380&q=80"
+                  alt="Chocolate Mousse"
+                  loading="lazy"
+                />
+                <input
+                  type="checkbox"
+                  id="mheart-dessert-10"
+                  class="heart-check"
+                />
+                <label for="mheart-dessert-10" class="heart-icon"></label>
+              </div>
+              <div class="modal-card-body">
+                <h3>Chocolate Mousse</h3>
+                <p>Airy dark chocolate mousse with whipped cream topping</p>
+                <div class="modal-card-footer">
+                  <span class="price">Rs. 290</span>
+                  <div class="add-to-cart-wrapper">
+                    <div class="qty-selector">
+                      <button
+                        class="qty-btn minus"
+                        onclick="updateQty(this, -1)"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        readonly
+                      />
+                      <button class="qty-btn plus" onclick="updateQty(this, 1)">
+                        +
+                      </button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="hero-section">
+      <h1>Our Special Coffee</h1>
+    </section>
+    <main class="menu-content">
+      <section class="menu-category" id="hot-coffee-section">
+        <div class="category-banner hot-banner">
+          <img src="../images/1.svg" class="category-icon" alt="" />
+          <div class="category-banner-text">
+            <h2>Hot Coffee</h2>
+            <p>Warm your soul with our signature hot beverages</p>
+          </div>
+          <div class="category-banner-actions">
+            <span class="carousel-count">10 items</span>
+            <button
+              class="view-all-btn"
+              onclick="openModal('modal-hot')"
+              id="viewall-hot"
+            >
+              View All &rarr;
+            </button>
+          </div>
+        </div>
+        <div class="carousel">
+          <input type="radio" name="hot-nav" id="hot-page-1" checked />
+          <input type="radio" name="hot-nav" id="hot-page-2" />
+          <div class="carousel-inner">
+            <label
+              for="hot-page-1"
+              class="carousel-arrow arrow-left"
+              aria-label="Previous"
+              >&#8249;</label
+            >
+            <label
+              for="hot-page-2"
+              class="carousel-arrow arrow-right"
+              aria-label="Next"
+              >&#8250;</label
+            >
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-page">
+                  <article class="card" id="card-hot-1">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Latte"
+                        loading="lazy"
+                      />
+                      <span class="card-badge badge-popular">Popular</span>
+                      <input
+                        type="checkbox"
+                        id="heart-hot-1"
+                        class="heart-check"
+                      />
+                      <label for="heart-hot-1" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.9</span>
+                      </div>
+                      <h3 class="card-title">Latte</h3>
+                      <p class="card-desc">
+                        Rich espresso with steamed milk and light foam
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 250</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-hot-2">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1561047029-3000c68339ca?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Cappuccino"
+                        loading="lazy"
+                      />
+                      <span class="card-badge badge-pick">Chef's Pick</span>
+                      <input
+                        type="checkbox"
+                        id="heart-hot-2"
+                        class="heart-check"
+                      />
+                      <label for="heart-hot-2" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Cappuccino</h3>
+                      <p class="card-desc">
+                        Bold espresso topped with velvety milk foam
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 220</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-hot-3">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Espresso"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-hot-3"
+                        class="heart-check"
+                      />
+                      <label for="heart-hot-3" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.7</span>
+                      </div>
+                      <h3 class="card-title">Espresso</h3>
+                      <p class="card-desc">
+                        Pure strong coffee shot with rich crema on top
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 180</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-hot-4">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Turkish Coffee"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-hot-4"
+                        class="heart-check"
+                      />
+                      <label for="heart-hot-4" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.9</span>
+                      </div>
+                      <h3 class="card-title">Turkish Coffee</h3>
+                      <p class="card-desc">
+                        Traditional finely ground coffee with cardamom
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 200</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="carousel-page">
+                  <article class="card" id="card-hot-5">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-hot-5"
+                        class="heart-check"
+                      />
+                      <label for="heart-hot-5" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Mocha</h3>
+                      <p class="card-desc">
+                        Espresso with chocolate, steamed milk &amp; whipped
+                        cream
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 280</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-hot-6">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Americano"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-hot-6"
+                        class="heart-check"
+                      />
+                      <label for="heart-hot-6" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.6</span>
+                      </div>
+                      <h3 class="card-title">Americano</h3>
+                      <p class="card-desc">
+                        Double espresso diluted with hot water for smooth taste
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 190</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-hot-7">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Macchiato"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-hot-7"
+                        class="heart-check"
+                      />
+                      <label for="heart-hot-7" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Macchiato</h3>
+                      <p class="card-desc">
+                        Espresso marked with a dash of foamed milk
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 230</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-hot-8">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Flat White"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-hot-8"
+                        class="heart-check"
+                      />
+                      <label for="heart-hot-8" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.7</span>
+                      </div>
+                      <h3 class="card-title">Flat White</h3>
+                      <p class="card-desc">
+                        Smooth microfoam over a double ristretto shot
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 240</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <label for="hot-page-1" class="dot" aria-label="Page 1"></label>
+            <label for="hot-page-2" class="dot" aria-label="Page 2"></label>
+          </div>
+        </div>
+      </section>
+      <section class="menu-category" id="cold-coffee-section">
+        <div class="category-banner cold-banner">
+          <img src="../images/2.svg" class="category-icon" alt="" />
+          <div class="category-banner-text">
+            <h2>Cold Coffee</h2>
+            <p>Refresh yourself with our iced creations</p>
+          </div>
+          <div class="category-banner-actions">
+            <span class="carousel-count">10 items</span>
+            <button
+              class="view-all-btn"
+              onclick="openModal('modal-cold')"
+              id="viewall-cold"
+            >
+              View All &rarr;
+            </button>
+          </div>
+        </div>
+        <div class="carousel">
+          <input type="radio" name="cold-nav" id="cold-page-1" checked />
+          <input type="radio" name="cold-nav" id="cold-page-2" />
+          <div class="carousel-inner">
+            <label
+              for="cold-page-1"
+              class="carousel-arrow arrow-left"
+              aria-label="Previous"
+              >&#8249;</label
+            >
+            <label
+              for="cold-page-2"
+              class="carousel-arrow arrow-right"
+              aria-label="Next"
+              >&#8250;</label
+            >
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-page">
+                  <article class="card" id="card-cold-1">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Iced Latte"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-cold-1"
+                        class="heart-check"
+                      />
+                      <label for="heart-cold-1" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.9</span>
+                      </div>
+                      <h3 class="card-title">Iced Latte</h3>
+                      <p class="card-desc">
+                        Chilled espresso with cold milk over ice cubes
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 280</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-cold-2">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Cold Brew"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-cold-2"
+                        class="heart-check"
+                      />
+                      <label for="heart-cold-2" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Cold Brew</h3>
+                      <p class="card-desc">
+                        Slow-steeped for 24 hours, smooth and bold
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 260</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-cold-3">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Frappuccino"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-cold-3"
+                        class="heart-check"
+                      />
+                      <label for="heart-cold-3" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.9</span>
+                      </div>
+                      <h3 class="card-title">Frappuccino</h3>
+                      <p class="card-desc">
+                        Blended iced coffee with cream and caramel drizzle
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 320</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-cold-4">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Iced Mocha"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-cold-4"
+                        class="heart-check"
+                      />
+                      <label for="heart-cold-4" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.7</span>
+                      </div>
+                      <h3 class="card-title">Iced Mocha</h3>
+                      <p class="card-desc">
+                        Chocolate espresso blend with ice and whipped cream
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 300</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="carousel-page">
+                  <article class="card" id="card-cold-5">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1621944190310-e3cca1564bd7?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Iced Macchiato"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-cold-5"
+                        class="heart-check"
+                      />
+                      <label for="heart-cold-5" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Iced Macchiato</h3>
+                      <p class="card-desc">
+                        Layered caramel, milk, and espresso over ice
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 290</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-cold-6">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1623869675781-80aa31012a5a?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Vietnamese Coffee"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-cold-6"
+                        class="heart-check"
+                      />
+                      <label for="heart-cold-6" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.6</span>
+                      </div>
+                      <h3 class="card-title">Vietnamese Coffee</h3>
+                      <p class="card-desc">
+                        Strong coffee with sweet condensed milk on ice
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 270</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-cold-7">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1517959105821-eaf2591984ca?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Iced Americano"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-cold-7"
+                        class="heart-check"
+                      />
+                      <label for="heart-cold-7" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.5</span>
+                      </div>
+                      <h3 class="card-title">Iced Americano</h3>
+                      <p class="card-desc">
+                        Double shot espresso with cold water and ice
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 220</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-cold-8">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Coffee Smoothie"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-cold-8"
+                        class="heart-check"
+                      />
+                      <label for="heart-cold-8" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Coffee Smoothie</h3>
+                      <p class="card-desc">
+                        Blended coffee with banana, chocolate &amp; cocoa
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 340</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <label for="cold-page-1" class="dot" aria-label="Page 1"></label>
+            <label for="cold-page-2" class="dot" aria-label="Page 2"></label>
+          </div>
+        </div>
+      </section>
+      <section class="menu-category" id="bakery-section">
+        <div class="category-banner bakery-banner">
+          <img src="../images/3.svg" class="category-icon" alt="" />
+          <div class="category-banner-text">
+            <h2>Bakery</h2>
+            <p>Freshly baked goods straight from our oven</p>
+          </div>
+          <div class="category-banner-actions">
+            <span class="carousel-count">10 items</span>
+            <button
+              class="view-all-btn"
+              onclick="openModal('modal-bakery')"
+              id="viewall-bakery"
+            >
+              View All &rarr;
+            </button>
+          </div>
+        </div>
+        <div class="carousel">
+          <input type="radio" name="bakery-nav" id="bakery-page-1" checked />
+          <input type="radio" name="bakery-nav" id="bakery-page-2" />
+          <div class="carousel-inner">
+            <label
+              for="bakery-page-1"
+              class="carousel-arrow arrow-left"
+              aria-label="Previous"
+              >&#8249;</label
+            >
+            <label
+              for="bakery-page-2"
+              class="carousel-arrow arrow-right"
+              aria-label="Next"
+              >&#8250;</label
+            >
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-page">
+                  <article class="card" id="card-bakery-1">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Croissant"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-bakery-1"
+                        class="heart-check"
+                      />
+                      <label for="heart-bakery-1" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.9</span>
+                      </div>
+                      <h3 class="card-title">Croissant</h3>
+                      <p class="card-desc">
+                        Golden flaky butter croissant, freshly baked
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 150</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-bakery-2">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Chocolate Muffin"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-bakery-2"
+                        class="heart-check"
+                      />
+                      <label for="heart-bakery-2" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Chocolate Muffin</h3>
+                      <p class="card-desc">
+                        Rich moist muffin loaded with chocolate chips
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 180</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-bakery-3">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Cinnamon Roll"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-bakery-3"
+                        class="heart-check"
+                      />
+                      <label for="heart-bakery-3" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.9</span>
+                      </div>
+                      <h3 class="card-title">Cinnamon Roll</h3>
+                      <p class="card-desc">
+                        Soft swirl pastry with cream cheese frosting
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 200</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-bakery-4">
+                    <div class="card-image-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Danish Pastry"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-bakery-4"
+                        class="heart-check"
+                      />
+                      <label for="heart-bakery-4" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.6</span>
+                      </div>
+                      <h3 class="card-title">Danish Pastry</h3>
+                      <p class="card-desc">
+                        Flaky pastry filled with fruit and custard
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 170</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="carousel-page">
+                  <article class="card" id="card-bakery-5">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1509365390695-33aee754301f?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Blueberry Scone"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-bakery-5"
+                        class="heart-check"
+                      />
+                      <label for="heart-bakery-5" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.5</span>
+                      </div>
+                      <h3 class="card-title">Blueberry Scone</h3>
+                      <p class="card-desc">
+                        Buttery scone bursting with fresh blueberries
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 160</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-bakery-6">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Pain au Chocolat"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-bakery-6"
+                        class="heart-check"
+                      />
+                      <label for="heart-bakery-6" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Pain au Chocolat</h3>
+                      <p class="card-desc">
+                        Flaky layers wrapped around dark chocolate bars
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 190</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-bakery-7">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Cookies"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-bakery-7"
+                        class="heart-check"
+                      />
+                      <label for="heart-bakery-7" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.9</span>
+                      </div>
+                      <h3 class="card-title">Cookies</h3>
+                      <p class="card-desc">
+                        Warm chewy cookies with chocolate chip chunks
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 120</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-bakery-8">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Banana Bread"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-bakery-8"
+                        class="heart-check"
+                      />
+                      <label for="heart-bakery-8" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.7</span>
+                      </div>
+                      <h3 class="card-title">Banana Bread</h3>
+                      <p class="card-desc">
+                        Moist banana loaf topped with crunchy walnuts
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 140</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <label for="bakery-page-1" class="dot" aria-label="Page 1"></label>
+            <label for="bakery-page-2" class="dot" aria-label="Page 2"></label>
+          </div>
+        </div>
+      </section>
+      <section class="menu-category" id="dessert-section">
+        <div class="category-banner dessert-banner">
+          <img src="../images/4.svg" class="category-icon" alt="" />
+          <div class="category-banner-text">
+            <h2>Dessert</h2>
+            <p>Indulge in our heavenly sweet creations</p>
+          </div>
+          <div class="category-banner-actions">
+            <span class="carousel-count">10 items</span>
+            <button
+              class="view-all-btn"
+              onclick="openModal('modal-dessert')"
+              id="viewall-dessert"
+            >
+              View All &rarr;
+            </button>
+          </div>
+        </div>
+        <div class="carousel">
+          <input type="radio" name="dessert-nav" id="dessert-page-1" checked />
+          <input type="radio" name="dessert-nav" id="dessert-page-2" />
+          <div class="carousel-inner">
+            <label
+              for="dessert-page-1"
+              class="carousel-arrow arrow-left"
+              aria-label="Previous"
+              >&#8249;</label
+            >
+            <label
+              for="dessert-page-2"
+              class="carousel-arrow arrow-right"
+              aria-label="Next"
+              >&#8250;</label
+            >
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-page">
+                  <article class="card" id="card-dessert-1">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Tiramisu"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-dessert-1"
+                        class="heart-check"
+                      />
+                      <label for="heart-dessert-1" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">5.0</span>
+                      </div>
+                      <h3 class="card-title">Tiramisu</h3>
+                      <p class="card-desc">
+                        Classic Italian layers of coffee-soaked ladyfingers
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 350</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-dessert-2">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Cheesecake"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-dessert-2"
+                        class="heart-check"
+                      />
+                      <label for="heart-dessert-2" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.9</span>
+                      </div>
+                      <h3 class="card-title">Cheesecake</h3>
+                      <p class="card-desc">
+                        Creamy New York style with buttery graham crust
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 320</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-dessert-3">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Brownie"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-dessert-3"
+                        class="heart-check"
+                      />
+                      <label for="heart-dessert-3" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Brownie</h3>
+                      <p class="card-desc">
+                        Fudgy dark chocolate brownie with walnut pieces
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 250</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-dessert-4">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Crème Brûlée"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-dessert-4"
+                        class="heart-check"
+                      />
+                      <label for="heart-dessert-4" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Crème Brûlée</h3>
+                      <p class="card-desc">
+                        Rich vanilla custard with caramelized sugar top
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 380</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="carousel-page">
+                  <article class="card" id="card-dessert-5">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Panna Cotta"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-dessert-5"
+                        class="heart-check"
+                      />
+                      <label for="heart-dessert-5" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                        ><span class="rating-num">4.7</span>
+                      </div>
+                      <h3 class="card-title">Panna Cotta</h3>
+                      <p class="card-desc">
+                        Silky Italian cream dessert with berry compote
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 300</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-dessert-6">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Éclair"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-dessert-6"
+                        class="heart-check"
+                      />
+                      <label for="heart-dessert-6" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Éclair</h3>
+                      <p class="card-desc">
+                        Choux pastry filled with cream, topped with glaze
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 220</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-dessert-7">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Chocolate Cake"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-dessert-7"
+                        class="heart-check"
+                      />
+                      <label for="heart-dessert-7" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.9</span>
+                      </div>
+                      <h3 class="card-title">Chocolate Cake</h3>
+                      <p class="card-desc">
+                        Three-layer chocolate cake with ganache frosting
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 280</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card" id="card-dessert-8">
+                    <div class="card-image-wrapper">
+                      <img
+                  src="https://images.unsplash.com/photo-1562007908-17c67e878c88?auto=format&fit=crop&w=500&h=380&q=80"
+                        alt="Apple Pie"
+                        loading="lazy"
+                      />
+                      <input
+                        type="checkbox"
+                        id="heart-dessert-8"
+                        class="heart-check"
+                      />
+                      <label for="heart-dessert-8" class="heart-icon"></label>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-rating">
+                        <span class="stars"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        ><span class="rating-num">4.8</span>
+                      </div>
+                      <h3 class="card-title">Apple Pie</h3>
+                      <p class="card-desc">
+                        Warm spiced apple filling in a buttery crust
+                      </p>
+                      <div class="card-footer">
+                        <span class="price">Rs. 260</span>
+                        <div class="add-to-cart-wrapper">
+                          <div class="qty-selector">
+                            <button
+                              class="qty-btn minus"
+                              onclick="updateQty(this, -1)"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="number"
+                              class="qty-input"
+                              value="1"
+                              min="1"
+                              readonly
+                            />
+                            <button
+                              class="qty-btn plus"
+                              onclick="updateQty(this, 1)"
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            class="add-to-cart-btn"
+                            onclick="addToCart(this)"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <label for="dessert-page-1" class="dot" aria-label="Page 1"></label>
+            <label for="dessert-page-2" class="dot" aria-label="Page 2"></label>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="menu-footer">
+      <div class="footer-top">
+        <div class="footer-col footer-brand-col">
+          <div class="footer-logo">
+            <span class="footer-logo-dot"></span>
+            <span class="footer-brand-name">M.E.T Coffee</span>
+          </div>
+          <p class="footer-tagline">
+            Handcrafted with love, served with passion. Your perfect coffee
+            moment starts here.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.02-.06z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Our Menu</h4>
+          <ul class="footer-links">
+            <li><a href="#hot-coffee-section">? Hot Coffee</a></li>
+            <li><a href="#cold-coffee-section">?? Cold Coffee</a></li>
+            <li><a href="#bakery-section">?? Bakery</a></li>
+            <li><a href="#dessert-section">?? Desserts</a></li>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  openModal('modal-hot');
+                  return false;
+                "
+                >View Hot Coffee</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  openModal('modal-cold');
+                  return false;
+                "
+                >View Cold Coffee</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Visit Us</h4>
+          <ul class="footer-links">
+            <li>
+              <svg
+                class="footer-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              123 Coffee St., Downtown
+            </li>
+            <li>
+              <svg
+                class="footer-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              +20 100 000 0000
+            </li>
+            <li>
+              <svg
+                class="footer-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              hello@metcoffee.com
+            </li>
+            <li>
+              <svg
+                class="footer-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              Daily 8:00 AM  11:00 PM
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../Home.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Reservations</a></li>
+            <li><a href="#">Loyalty Program</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 M.E.T Coffee. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span>·</span>
+          <a href="#">Terms of Service</a>
+          <span>·</span>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+    <div class="cart-overlay" id="cart-overlay">
+      <div class="cart-modal" id="cart-sidebar">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <button class="close-cart-btn" id="close-cart-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">Rs. 0</span>
+          </div>
+          <button
+            class="checkout-btn"
+            onclick="window.location.href = 'Order.html'"
+          >
+            Go to Order
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openModal(id) {
+        const overlay = document.getElementById(id);
+        if (!overlay) return;
+        overlay.classList.add("modal-active");
+        document.body.classList.add("modal-open");
+        overlay.querySelector(".modal-close").focus();
+      }
+      function closeAllModals() {
+        document
+          .querySelectorAll(".modal-overlay.modal-active")
+          .forEach((m) => {
+            m.classList.remove("modal-active");
+          });
+        document.body.classList.remove("modal-open");
+      }
+      document.querySelectorAll(".modal-overlay").forEach((overlay) => {
+        overlay.addEventListener("click", function (e) {
+          if (e.target === this) closeAllModals();
+        });
+      });
+      document.querySelectorAll(".modal-close").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          closeAllModals();
+        });
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeAllModals();
+          if (cartOverlay) cartOverlay.classList.remove("active");
+        }
+      });
+      const menuBtn = document.getElementById("menuBtn");
+      const navMenuHead = document.getElementById("navMenu");
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const mobileDropdownMenu = document.querySelector(
+        ".mobile-dropdown .dropdown-menu",
+      );
+      if (menuBtn) {
+        menuBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (navMenuHead) navMenuHead.classList.toggle("active");
+          if (mobileDropdownMenu) mobileDropdownMenu.classList.toggle("show");
+        });
+      }
+      if (mobileMenuBtn && mobileDropdownMenu) {
+        mobileMenuBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          mobileDropdownMenu.classList.toggle("show");
+        });
+      }
+      document.addEventListener("click", (e) => {
+        if (
+          menuBtn &&
+          !menuBtn.contains(e.target) &&
+          mobileDropdownMenu &&
+          !mobileDropdownMenu.contains(e.target)
+        ) {
+          mobileDropdownMenu.classList.remove("show");
+        }
+      });
+      if (mobileDropdownMenu) {
+        const dropdownLinks = mobileDropdownMenu.querySelectorAll("a");
+        dropdownLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileDropdownMenu.classList.remove("show");
+          });
+        });
+      }
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartBadge = document.getElementById("cart-badge");
+      const cartOverlay = document.getElementById("cart-overlay");
+      const cartItemsContainer = document.getElementById(
+        "cart-items-container",
+      );
+      const cartTotalPrice = document.getElementById("cart-total-price");
+      const cartIconBtn = document.getElementById("cart-icon-btn");
+      const closeCartBtn = document.getElementById("close-cart-btn");
+      function updateQty(btn, change) {
+        const input = btn.parentElement.querySelector(".qty-input");
+        let val = parseInt(input.value) + change;
+        if (val >= 1) input.value = val;
+      }
+      function addToCart(btn) {
+        const card = btn.closest(".modal-card") || btn.closest(".card");
+        if (!card) return;
+        const titleEl =
+          card.querySelector(".card-title") || card.querySelector("h3");
+        const title = titleEl ? titleEl.innerText : "Item";
+        const priceStr = card.querySelector(".price").innerText;
+        const price = parseInt(priceStr.replace(/[^0-9]/g, ""));
+        const imageSrc = card.querySelector("img").src;
+        const qtyInput = card.querySelector(".qty-input");
+        const quantity = qtyInput ? parseInt(qtyInput.value) : 1;
+        const existingItem = cart.find((item) => item.title === title);
+        if (existingItem) {
+          existingItem.quantity += quantity;
+        } else {
+          cart.push({ title, price, quantity, imageSrc });
+        }
+        if (qtyInput) qtyInput.value = 1;
+        const origText = btn.innerText;
+        btn.innerText = "✓ Added!";
+        btn.style.background = "#28a745";
+        btn.style.color = "#fff";
+        btn.style.borderColor = "#28a745";
+        setTimeout(() => {
+          btn.innerText = origText;
+          btn.style.background = "";
+          btn.style.color = "";
+          btn.style.borderColor = "";
+        }, 1200);
+        renderCart();
+      }
+      function renderCart() {
+        cartItemsContainer.innerHTML = "";
+        let total = 0;
+        let totalItems = 0;
+        if (cart.length === 0) {
+          cartItemsContainer.innerHTML =
+            '<div class="empty-cart-msg">🛒<br>Your cart is empty</div>';
+        }
+        cart.forEach((item, index) => {
+          total += item.price * item.quantity;
+          totalItems += item.quantity;
+          const el = document.createElement("div");
+          el.className = "cart-item";
+          el.innerHTML = `
+                    <img src="${item.imageSrc}" alt="${item.title}">
+                    <div class="cart-item-details">
+                        <h4>${item.title}</h4>
+                        <div class="cart-item-price">Rs. ${item.price} × ${item.quantity} = <strong>Rs. ${item.price * item.quantity}</strong></div>
+                        <div class="cart-item-actions">
+                            <button onclick="changeCartItemQty(${index}, -1)">−</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="changeCartItemQty(${index}, 1)">+</button>
+                            <button class="remove-btn" onclick="removeFromCart(${index})">✕ Remove</button>
+                        </div>
+                    </div>
+                `;
+          cartItemsContainer.appendChild(el);
+        });
+        cartBadge.innerText = totalItems;
+        cartTotalPrice.innerText = "Rs. " + total;
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+      function changeCartItemQty(index, change) {
+        if (cart[index].quantity + change > 0) {
+          cart[index].quantity += change;
+        } else {
+          cart.splice(index, 1);
+        }
+        renderCart();
+      }
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        renderCart();
+        showNotification("Item removed from cart");
+      }
+      function showNotification(message) {
+        const n = document.createElement("div");
+        n.className = "notification success-notification";
+        n.innerText = message;
+        n.style.position = "fixed";
+        n.style.top = "20px";
+        n.style.right = "20px";
+        n.style.zIndex = "9999";
+        document.body.appendChild(n);
+        setTimeout(() => n.remove(), 2500);
+      }
+      window.addEventListener("storage", () => {
+        cart = JSON.parse(localStorage.getItem("cart")) || [];
+        renderCart();
+      });
+      if (cartIconBtn) {
+        cartIconBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          cartOverlay.classList.add("active");
+        });
+      }
+      if (closeCartBtn) {
+        closeCartBtn.addEventListener("click", () => {
+          cartOverlay.classList.remove("active");
+        });
+      }
+      if (cartOverlay) {
+        cartOverlay.addEventListener("click", (e) => {
+          if (e.target === cartOverlay) cartOverlay.classList.remove("active");
+        });
+      }
+      renderCart();
+    </script>
+  </body>
+</html>

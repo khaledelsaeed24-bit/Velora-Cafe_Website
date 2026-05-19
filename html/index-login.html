@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In — VELORA</title>
+    <link rel="stylesheet" href="../css/style-login,signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="card">
+        <nav class="top-nav">
+          <a href="Home.html" class="nav-link">Home</a>
+          <a href="index-signup.html" class="nav-link nav-signup">Sign Up</a>
+        </nav>
+        <div class="form-content">
+          <p class="label-top">WELCOME BACK</p>
+          <h1 class="form-title">Your order<br />is waiting.</h1>
+          <form action="../php/login_process.php" method="POST">
+            <div class="field-group">
+              <label for="email">EMAIL ADDRESS</label>
+              <div class="input-wrapper">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                />
+                <div class="input-line"></div>
+              </div>
+            </div>
+            <div class="field-group">
+              <div class="label-row">
+                <label for="password">PASSWORD</label>
+                <a href="#" class="forgot">FORGOT PASSWORD?</a>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="••••••••••••"
+                  required
+                />
+                <div class="input-line"></div>
+              </div>
+            </div>
+            <button type="submit" name="submit" class="login-btn">
+              <span>LOG IN</span>
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </form>
+          <p class="signup-text">
+            Don't have an account?
+            <a href="index-signup.html">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

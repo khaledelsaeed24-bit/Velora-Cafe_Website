@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #f5f1ea;
+  color: #333;
+  line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
+.hero {
+  height: 70vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/background.jpg") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+.story {
+  display: flex;
+  gap: 40px;
+  padding: 80px 60px;
+  align-items: center;
+  background: #fff;
+}
+.story-slider {
+  width: 50%;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+.slider-track {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  animation: slideStory 24s infinite ease-in-out;
+}
+.slider-track img {
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+}
+@keyframes slideStory {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  25%,
+  45% {
+    transform: translateX(-25%);
+  }
+  50%,
+  70% {
+    transform: translateX(-50%);
+  }
+  75%,
+  95% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.story-text {
+  width: 50%;
+}
+.story-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #2b1d14;
+  position: relative;
+  padding-bottom: 12px;
+}
+.story-text h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #c8a97e, #d4af37);
+  border-radius: 2px;
+}
+.story-text p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px;
+  background: #e8dfd1;
+  text-align: center;
+  gap: 30px;
+}
+.feature {
+  flex: 1;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #2b1d14;
+}
+.feature p {
+  color: #666;
+  font-size: 14px;
+}
+.team {
+  padding: 80px 60px;
+  text-align: center;
+  background: #fff;
+}
+.team h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #2b1d14;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+.team h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #c8a97e, #d4af37);
+  border-radius: 2px;
+}
+.team-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: #f5f1ea;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.card h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #2b1d14;
+}
+.card p {
+  color: #c8a97e;
+  font-size: 14px;
+}
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px;
+  background: #2b1d14;
+  color: #fff;
+  text-align: center;
+  gap: 30px;
+}
+.stats > div {
+  flex: 1;
+  padding: 20px;
+}
+.stats h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #c8a97e;
+}
+.stats p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+.cta {
+  padding: 80px 60px;
+  text-align: center;
+  background: #e8dfd1;
+}
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #2b1d14;
+}
+.cta p {
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  opacity: 0.9;
+  color: #666;
+}
+.main-footer {
+  background: #2b1d14;
+  color: #fff;
+  padding: 60px 40px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-col {
+  min-width: 140px;
+  flex: 1;
+}
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 15px;
+  color: #c8a97e;
+}
+.footer-col p {
+  margin: 8px 0;
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+.footer-col p:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #2b1d14;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-icons a:hover {
+  background: #c7a17a;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(199, 161, 122, 0.3);
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .hero {
+    height: 50vh;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .story {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 30px;
+  }
+  .story-slider,
+  .story-text {
+    width: 100%;
+  }
+  .story-slider {
+    height: 250px;
+    border-radius: 16px;
+  }
+  .story-text h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .story-text h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .story-text p {
+    text-align: center;
+    font-size: 15px;
+  }
+  .features {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 16px;
+  }
+  .feature {
+    padding: 24px;
+  }
+  .feature h3 {
+    font-size: 20px;
+  }
+  .team {
+    padding: 50px 20px;
+  }
+  .team h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .team-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    max-width: none;
+  }
+  .card img {
+    height: 130px;
+  }
+  .card h4 {
+    font-size: 16px;
+  }
+  .stats {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 10px;
+  }
+  .stats > div {
+    padding: 15px;
+  }
+  .stats h2 {
+    font-size: 36px;
+  }
+  .stats p {
+    font-size: 14px;
+  }
+  .cta {
+    padding: 50px 20px;
+  }
+  .cta h2 {
+    font-size: 28px;
+  }
+  .cta p {
+    font-size: 14px;
+  }
+  .main-footer {
+    padding: 40px 20px;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .footer-col:first-child {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  .footer-col:first-child .social-icons {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .story {
+    padding: 35px 16px;
+    gap: 24px;
+  }
+  .story-slider {
+    height: 200px;
+  }
+  .story-text h2 {
+    font-size: 24px;
+  }
+  .story-text p {
+    font-size: 14px;
+  }
+  .features {
+    padding: 30px 16px;
+    gap: 12px;
+  }
+  .feature {
+    padding: 20px 16px;
+  }
+  .feature h3 {
+    font-size: 18px;
+  }
+  .feature p {
+    font-size: 13px;
+  }
+  .team {
+    padding: 35px 16px;
+  }
+  .team h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .card {
+    padding: 14px;
+  }
+  .card img {
+    height: 110px;
+  }
+  .card h4 {
+    font-size: 15px;
+  }
+  .card p {
+    font-size: 12px;
+  }
+  .stats {
+    padding: 30px 16px;
+    gap: 5px;
+  }
+  .stats h2 {
+    font-size: 30px;
+  }
+  .stats p {
+    font-size: 13px;
+  }
+  .cta {
+    padding: 35px 16px;
+  }
+  .cta h2 {
+    font-size: 24px;
+  }
+  .cta p {
+    font-size: 13px;
+  }
+  .main-footer {
+    padding: 35px 16px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer-col:first-child {
+    grid-column: auto;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+}
+@media (max-width: 360px) {
+  .story-slider {
+    height: 180px;
+  }
+  .team-cards {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .stats h2 {
+    font-size: 26px;
+  }
+  .cta h2,
+  .team h2,
+  .story-text h2 {
+    font-size: 22px;
+  }
+}
